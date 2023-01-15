@@ -10,7 +10,7 @@ What began as wanting (read needing) to organize my notes so future me could ret
 
 # Structure
 
-The raw markdown files are within the `pages` folder. Organized by topic.
+The raw markdown files are within the `/src/pages/` directory. Organized by topic.
 
 # Live Site
 
