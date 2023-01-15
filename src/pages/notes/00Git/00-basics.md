@@ -1,3 +1,8 @@
+---
+title: 'Basics'
+description: 'Getting started with Git.'
+---
+
 # Custom Configuration
 
 **List Current Settings**
