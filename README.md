@@ -1,50 +1,19 @@
-# Welcome to [Astro](https://astro.build)
+# Front End Web Development Notes
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/s/github/withastro/astro/tree/latest/examples/basics)
+> A collection of personal notes for learning web development.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+This is a living document as I continue to add notes through my programming journey.
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+# Reason
 
+What began as wanting (read needing) to organize my notes so future me could retrieve them quickly and easily turned into a desire to share my knowledge with others.
 
-## 🚀 Project Structure
+# Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+The raw markdown files are within the `pages` folder. Organized by topic.
 
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+# Live Site
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cceb08bd-fdab-4012-83fc-01d93a25f79b/deploy-status)](https://app.netlify.com/sites/front-end-web-dev-notes/deploys)
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                             |
-| :--------------------- | :------------------------------------------------- |
-| `npm install`          | Installs dependencies                              |
-| `npm run dev`          | Starts local dev server at `localhost:3000`        |
-| `npm run build`        | Build your production site to `./dist/`            |
-| `npm run preview`      | Preview your build locally, before deploying       |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
-| `npm run astro --help` | Get help using the Astro CLI                       |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+https://front-end-web-dev-notes.netlify.app/
