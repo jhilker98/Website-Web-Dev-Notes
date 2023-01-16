@@ -5,7 +5,7 @@ html,body,main,header,footer,nav,a,slot {
     padding: 0;
 }
 
-main {
-    margin: 0 1vw;
+body {
+    padding: 0 1vw;
     background-color: rgb(240, 240, 250);
 }
