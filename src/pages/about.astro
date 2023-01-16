@@ -1,6 +1,6 @@
 ---
 import Footer from '../components/Footer.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/MainLayout.astro';
 import '../styles/global.css';
 
 const identity = {
@@ -13,9 +13,9 @@ const techStack = "things";
 const pageTitle = "About Me";
 ---
 
-<Layout>
+<MainLayout>
     <main>
         <h1>{pageTitle}</h1>
     </main>
     <Footer />
-</Layout>
+</MainLayout>
