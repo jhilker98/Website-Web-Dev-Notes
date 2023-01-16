@@ -2,13 +2,19 @@
 import { Footer } from '../components/Footer.astro';
 import '../styles/global.css';
 
-const pageTitle = "About Me";
-
 const identity = {
     name: "Research Scientist",
     specialty: ["language perception","human computer interaction"],
 };
 
 const techStack = "things";
+
+const pageTitle = "About Me";
 ---
 
+<Layout>
+    <main>
+        <h1>{pageTitle}</h1>
+    </main>
+    <Footer />
+</Layout>
