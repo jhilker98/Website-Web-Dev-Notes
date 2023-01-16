@@ -3,4 +3,9 @@ const { frontmatter } = Astro.props;
 ---
 
 <h1>{frontmatter.title}</h1>
+<p>{frontmatter.description}</p>
+<section>
+    <h2>Tags</h2>
+    <section>{frontmatter.tags}</section>
+</section>
 <slot />
