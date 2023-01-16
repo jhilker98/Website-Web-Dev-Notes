@@ -9,3 +9,8 @@ html {
     padding: 0 1.5vw;
     background-color: rgb(240, 240, 250);
 }
+
+a {
+    text-decoration: none;
+    color: var(--accent-colour);
+}
