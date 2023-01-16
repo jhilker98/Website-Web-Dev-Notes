@@ -6,6 +6,6 @@ html,body,main,header,footer,nav,a,slot {
 }
 
 body {
-    padding: 0 1vw;
+    padding: 0 1.5vw;
     background-color: rgb(240, 240, 250);
 }
