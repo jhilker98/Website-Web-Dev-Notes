@@ -1,8 +1,11 @@
 * {box-sizing: border-box;}
 
-html,body,main,header,footer,nav,a {
+html,body,main,header,footer,nav,a,slot {
     margin: 0;
     padding: 0;
 }
 
-main {background-color: rgb(240, 240, 250);}
+main {
+    margin: 0 1vw;
+    background-color: rgb(240, 240, 250);
+}
