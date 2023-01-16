@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/NotesLayout.astro
+layout: ../../../layouts/NotesLayout.astro
 title: 'Git Basics'
 description: 'Getting started with Git.'
 author: 'Research Scientist'
