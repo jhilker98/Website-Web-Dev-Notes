@@ -1,11 +1,14 @@
 ---
+import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
-export interface Props {
-	pageTitle: string;
-}
+const pageTitle = "Home Page"
 
-const { pageTitle } = Astro.props;
+// export interface Props {
+// 	pageTitle: string;
+// }
+
+// const { pageTitle } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -19,6 +22,7 @@ const { pageTitle } = Astro.props;
 	</head>
 	<body>
 		<slot />
+		<Footer />
 	</body>
 </html>
 <style>
