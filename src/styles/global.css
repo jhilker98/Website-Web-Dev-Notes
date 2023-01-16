@@ -1,11 +1,11 @@
 * {box-sizing: border-box;}
 
-html,body,main,header,footer,nav,a,Layout,slot {
+html,body,main,header,footer,section,div,nav,a,slot {
     margin: 0;
     padding: 0;
 }
 
-body {
+html {
     padding: 0 1.5vw;
     background-color: rgb(240, 240, 250);
 }
