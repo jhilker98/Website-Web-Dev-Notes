@@ -1,39 +1,12 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-const gitNotes = await Astro.glob('../pages/notes/00Git/*.md');
-const htmlNotes = await Astro.glob('../pages/notes/01HTML/*.md');
-const pageTitle = 'Web Development Notes';
+
+const pageTitle = 'Home';
 ---
 
 <MainLayout pageTitle={pageTitle}>
     <main>
         <h1>{pageTitle}</h1>
-        <p>A collection of my notes for front end web development.</p>
-        <section id='TOC'>
-            <h2>Table Of Contents</h2>
-            <h3>Git</h3>
-            <nav>
-                <ol type="i">
-                    {gitNotes.map((note) => <li><a href={note.url}>{note.frontmatter.title}</a></li>)}
-                </ol>
-            </nav>
-            <h3>HTML</h3>
-            <nav>
-                <ol type="i">
-                    {htmlNotes.map((note) => <li><a href={note.url}>{note.frontmatter.title}</a></li>)}
-                </ol>
-                
-            </nav>
-        </section>
+        <p>This site contains a collection of my notes for front end web development.</p>
     </main>
 </MainLayout>
-
-<style>
-    h3 {
-        font-size: 24px;
-    }
-    a {
-        display: inline-block;
-        margin: 0 0 20px;
-    }
-</style>
