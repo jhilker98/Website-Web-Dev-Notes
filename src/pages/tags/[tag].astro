@@ -2,27 +2,27 @@
 import MainLayout from '../../layouts/MainLayout.astro';
 
 export async function getStaticPaths() {
-    const allNotes = await Astro.glob('../notes/00Git/*.md');
+    // const allNotes = await Astro.glob('../notes/00Git/*.md');
 
     return [
-        {params: {tag: "branches"}, props: {notes: allNotes}}
-        { params: { tag: "commits" }, props: {notes: allNotes} },
-        { params: { tag: "files" }, props: {notes: allNotes} },
-        { params: { tag: "git" }, props: {notes: allNotes} },
-        { params: { tag: "log" }, props: {notes: allNotes} },
-        { params: { tag: "prettify" }, props: {notes: allNotes} },
-        { params: { tag: "status" }, props: {notes: allNotes} },
-    ]
+        {params: {tag: "branches"}},
+        // { params: { tag: "commits" }, props: {notes: allNotes} },
+        // { params: { tag: "files" }, props: {notes: allNotes} },
+        // { params: { tag: "git" }, props: {notes: allNotes} },
+        // { params: { tag: "log" }, props: {notes: allNotes} },
+        // { params: { tag: "prettify" }, props: {notes: allNotes} },
+        // { params: { tag: "status" }, props: {notes: allNotes} },
+    ];
 }
 
 const { tag } = Astro.params;
-const { notes } = Astro.props;
-const { filteredNotes } = notes.filter((note) => note.frontmatter.tags.includes(tag));
+// const { notes } = Astro.props;
+// const { filteredNotes } = notes.filter((note) => note.frontmatter.tags.includes(tag));
 ---
 
 <mainLayout pageTitle={tag}>
     <p>Notes tagged with {tag}</p>
-    <ul>
+    <!-- <ul>
         {filteredNotes.map((note) => <li><a href={note.url}>{note.frontmatter.title}</a></li>)}
-    </ul>
+    </ul> -->
 </mainLayout>
