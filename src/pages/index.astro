@@ -8,12 +8,14 @@ const pageTitle = 'Web Development Notes';
     <main>
         <h1>{pageTitle}</h1>
         <p>A collection of my notes for front end web development.</p>
-        <section>
+        <section id='TOC'>
             <h2>Table Of Contents</h2>
             <h3>Git</h3>
             <nav>
-                <a href="/notes/00Git/00-basics/">Basics</a>
-                <a href="/notes/00Git/01-log/">Log</a>
+                <ol type="i">
+                    <li><a href="/notes/00Git/00-basics/">Basics</a></li>
+                    <li><a href="/notes/00Git/01-log/">Log</a></li>
+                </ol>
             </nav>
             <h3>HTML</h3>
             <nav>
@@ -26,5 +28,8 @@ const pageTitle = 'Web Development Notes';
 <style>
     h3 {
         font-size: 24px;
+    }
+    #TOC nav {
+        display: grid;
     }
 </style>
