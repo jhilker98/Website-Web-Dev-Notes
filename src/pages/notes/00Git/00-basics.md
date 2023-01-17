@@ -4,7 +4,7 @@ section: 'Git'
 title: 'Basics'
 description: 'Getting started with Git.'
 author: 'Research Scientist'
-tags: ["git","status","commits","branches","files","logs"]
+tags: ["git","status","commits","branches","files","log"]
 ---
 
 # Custom Configuration

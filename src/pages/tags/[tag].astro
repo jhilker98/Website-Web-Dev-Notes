@@ -1,0 +1,21 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+
+export async function getStaticPaths() {
+    return [
+        { params: { tag: "branches" } },
+        { params: { tag: "commits" } },
+        { params: { tag: "files" } },
+        { params: { tag: "git" } },
+        { params: { tag: "log" } },
+        { params: { tag: "prettify" } },
+        { params: { tag: "status" } },
+    ];
+}
+
+const { tag } = Astro.params
+---
+
+<mainLayout pageTitle={tag}>
+    <p>Notes tagged with {tag}</p>
+</mainLayout>
