@@ -4,15 +4,23 @@ import SocialMedia from './SocialMedia.astro';
 
 <footer>
     <p>A passion project by Research Scientist.</p>
-    <SocialMedia platform="twitter" username="ruben_a_sanchez" />
-    <SocialMedia platform="github" username="ResearchScientist" />
-    
-    <a href="https://researchscientist.github.io/WebsitePortfolio" target="_blank">Website</a>
+    <section>
+        <SocialMedia platform="twitter" username="ruben_a_sanchez" />
+        <SocialMedia platform="github" username="ResearchScientist" />
+        <a href="https://researchscientist.github.io/WebsitePortfolio" target="_blank">website</a>
+    </section>
 </footer>
 
 <style>
     footer {
         width: 100%;
         height: 100px;
+        display: flex;
+        justify-content: center;
+    }
+    footer section {
+        max-width: 400px;
+        display: flex;
+        justify-content: space-between;
     }
 </style>
