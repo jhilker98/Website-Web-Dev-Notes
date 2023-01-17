@@ -3,10 +3,11 @@ import MainLayout from "./MainLayout.astro";
 const { frontmatter } = Astro.props;
 ---
 <MainLayout pageTitle={frontmatter.title}>
-    <h1>{frontmatter.title}</h1>
+    <h1>{frontmatter.section}</h1>
+    <h2>{frontmatter.title}</h2>
     <p>{frontmatter.description}</p>
     <section>
-        <h2>Tags</h2>
+        <h3>Tags</h3>
         <section><p class="notes-tags">{frontmatter.tags}</p></section>
     </section>
     <slot />

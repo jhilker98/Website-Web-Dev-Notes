@@ -1,6 +1,7 @@
 ---
 layout: ../../../layouts/NotesLayout.astro
-title: 'Git Log'
+section: 'Git'
+title: 'Log'
 description: 'Show commits history.'
 author: 'Research Scientist'
 tags: ["git","log","commits","prettify"]
