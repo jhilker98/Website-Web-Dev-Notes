@@ -2,7 +2,7 @@
 import MainLayout from '../../layouts/MainLayout.astro';
 
 export async function getStaticPaths() {
-    const allNotes = await Astro.glob('../notes/*.md');
+    const allNotes = await Astro.glob('../../notes/*.md');
 
     return [
         { params: { tag: "branches" }, props: {notes: allNotes} },
