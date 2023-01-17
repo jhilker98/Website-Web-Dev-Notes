@@ -12,5 +12,5 @@ html {
 
 a {
     text-decoration: none;
-    color: var(--accent-colour);
+    color: var(--primary-colour);
 }
