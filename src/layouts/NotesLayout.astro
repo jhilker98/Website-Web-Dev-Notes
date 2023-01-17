@@ -2,7 +2,7 @@
 import MainLayout from "./MainLayout.astro";
 const { frontmatter } = Astro.props;
 ---
-<MainLayout pageTitle={pageTitle}>
+<MainLayout pageTitle={frontmatter.title}>
     <h1>{frontmatter.title}</h1>
     <p>{frontmatter.description}</p>
     <section>
