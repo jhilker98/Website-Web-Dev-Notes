@@ -8,15 +8,21 @@ const { frontmatter } = Astro.props;
     <p>{frontmatter.description}</p>
     <section>
         <h3>Tags</h3>
-        <section><p class="notes-tags">{frontmatter.tags}</p></section>
+        <section>
+            <!-- <p class="notes-tags">{frontmatter.tags}</p> -->
+            {frontmatter.tags.map((tag) => (<a class="tag" href={`/tags/${tag}`}>{tag}</a>))}
+        </section>
     </section>
     <slot />
 </MainLayout>
 
 <style>
-    .notes-tags {
-        margin: 0 5px 0 0;
-        padding: 2px 5px;
-        background-color: lightgrey;
+    .tag {
+        height: 26px;
+        margin: 0 10px 10px 0;
+        padding: 3px 4px;
+        display: inline-block;
+        border: solid 1px var(--primary-colour-dark);
+        background-color: var(--primary-colour-light);
     }
 </style>
