@@ -1,4 +1,5 @@
 :root {
     --primary-colour: rgb(100,150,250);
+    --primary-colour-soft: rgba(100,150,250,.5);
     --accent-colour: orange;
 }
