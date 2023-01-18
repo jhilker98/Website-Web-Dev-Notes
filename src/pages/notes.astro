@@ -2,7 +2,7 @@
 import MainLayout from '../layouts/MainLayout.astro';
 
 const gitNotes = await Astro.glob('../pages/notes/00Git/*.md');
-// const htmlNotes = await Astro.glob('../pages/notes/01HTML/*.md');
+const htmlNotes = await Astro.glob('../pages/notes/01HTML/*.md');
 const pageTitle = 'Web Development Notes'
 ---
 
@@ -20,7 +20,7 @@ const pageTitle = 'Web Development Notes'
             <h3>HTML</h3>
             <nav>
                 <ol type="i">
-                    <!-- {htmlNotes.map((note) => <li><a href={note.url}>{note.frontmatter.title}</a></li>)} -->
+                    {htmlNotes.map((note) => <li><a href={note.url}>{note.frontmatter.title}</a></li>)}
                 </ol>
             </nav>
         </section>
