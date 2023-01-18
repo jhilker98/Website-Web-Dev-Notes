@@ -3,13 +3,14 @@ import MainLayout from '../../layouts/MainLayout.astro';
 
 const allNotes = await Astro.glob('../notes/**/*.md');
 const allUniqueTags = [...new Set(allNotes.map((note) => note.frontmatter.tags).flat())];
+const sortedTags = allUniqueTags.sort();
 const pageTitle = 'Tags Index';
 const pageDescription = 'List of all tags found within the web development notes. Click on any tag to bring up a list of notes containing that tag.';
 ---
 
 <MainLayout pageTitle={pageTitle} pageDescription={pageDescription}>
     <div class="tags">
-        {allUniqueTags.map((tag) => (<a class="tag" href={`/tags/${tag}`}>{tag}</a>))}
+        {sortedTags.map((tag) => (<a class="tag" href={`/tags/${tag}`}>{tag}</a>))}
     </div>
 </MainLayout>
 
@@ -17,10 +18,7 @@ const pageDescription = 'List of all tags found within the web development notes
     .tags {
         height: calc(100vh - 190px);
         margin: 0 auto;
-        padding: 20vh 0;
-        /* display: inline-block; */
-        /* display: flex; */
-        /* flex-wrap: wrap; */
+        padding: 10vh 0 0;
     }
 
     .tag {
