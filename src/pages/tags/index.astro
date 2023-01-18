@@ -1,0 +1,28 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+
+const allNotes = await Astro.glob('../notes/**/*.md');
+const allUniqueTags = [...new Set(allNotes.map((note) => note.frontmatter.tags).flat())];
+const pageTitle = "Tags Index";
+---
+
+<MainLayout pageTitle={pageTitle}>
+    <div class="tags">
+        {allUniqueTags.map((tag) => (<p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>))}
+    </div>
+</MainLayout>
+
+<style>
+    .tags {
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .tag {
+        margin: 0 10px 10px 0;
+        padding: 4px 2px;
+        border: solid 1px var(--primary-colour-dark);
+        background-color: var(--primary-colour-light);
+    }
+</style>
