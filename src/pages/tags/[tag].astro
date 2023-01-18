@@ -4,27 +4,36 @@ import FetchedNote from '../../components/FetchedNote.astro';
 
 export async function getStaticPaths() {
     const allNotes = await Astro.glob('../notes/**/*.md');
+    const uniqueTags = [...new Set(allNotes.map((note) => note.frontmatter.tags).flat())];
 
-    return [
-        { params: { tag: "branches" }, props: { notes: allNotes } },
-        { params: { tag: "commits" }, props: {notes: allNotes} },
-        { params: { tag: "files" }, props: {notes: allNotes} },
-        { params: { tag: "git" }, props: {notes: allNotes} },
-        { params: { tag: "log" }, props: {notes: allNotes} },
-        { params: { tag: "prettify" }, props: {notes: allNotes} },
-        { params: { tag: "status" }, props: {notes: allNotes} },
-        { params: { tag: "minify" }, props: {notes: allNotes} }
-    ]
+    return uniqueTags.map((tag) => {
+        const filteredNotes = allNotes.filter((note) => note.frontmatter.tags.includes(tag));
+        return {
+            params: { tag },
+            props: {notes: filteredNotes },
+        };
+    });
+
+    // above does same as this block below but automatically , so better
+    // return [
+    //     { params: { tag: "branches" }, props: { notes: allNotes } },
+    //     { params: { tag: "commits" }, props: {notes: allNotes} },
+    //     { params: { tag: "files" }, props: {notes: allNotes} },
+    //     { params: { tag: "git" }, props: {notes: allNotes} },
+    //     { params: { tag: "log" }, props: {notes: allNotes} },
+    //     { params: { tag: "prettify" }, props: {notes: allNotes} },
+    //     { params: { tag: "status" }, props: {notes: allNotes} },
+    //     { params: { tag: "minify" }, props: {notes: allNotes} }
+    // ]
 }
 
 const { tag } = Astro.params;
 const { notes } = Astro.props;
-const filteredNotes = notes.filter((note) => note.frontmatter.tags.includes(tag));
 ---
 
 <mainLayout pageTitle={tag}>
     <p>Notes tagged with {tag}</p>
     <ul>
-        {filteredNotes.map(note => <FetchedNote url={note.url} title={note.frontmatter.title}/>)}
+        {notes.map(note => <FetchedNote url={note.url} title={note.frontmatter.title}/>)}
     </ul>
 </mainLayout>
