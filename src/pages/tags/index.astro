@@ -3,10 +3,11 @@ import MainLayout from '../../layouts/MainLayout.astro';
 
 const allNotes = await Astro.glob('../notes/**/*.md');
 const allUniqueTags = [...new Set(allNotes.map((note) => note.frontmatter.tags).flat())];
-const pageTitle = "Tags Index";
+const pageTitle = 'Tags Index';
+const pageDescription = 'List of all tags found within the web development notes. Click on any tag to bring up a list of notes containing that tag.';
 ---
 
-<MainLayout pageTitle={pageTitle}>
+<MainLayout pageTitle={pageTitle} pageDescription={pageDescription}>
     <div class="tags">
         {allUniqueTags.map((tag) => (<p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>))}
     </div>

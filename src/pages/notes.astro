@@ -4,10 +4,11 @@ import FetchedNote from '../components/FetchedNote.astro';
 
 const gitNotes = await Astro.glob('../pages/notes/00Git/*.md');
 const htmlNotes = await Astro.glob('../pages/notes/01HTML/*.md');
-const pageTitle = 'Web Development Notes'
+const pageTitle = 'Web Development Notes';
+const pageDescription = 'Table of Contents for all my front-end web development notes. Click on any listed item to be taken to its corresponding page.';
 ---
 
-<MainLayout pageTitle={pageTitle}>
+<MainLayout pageTitle={pageTitle} pageDescription={pageDescription}>
     <main>
         <h1>{pageTitle}</h1>
         <section id='TOC'>
