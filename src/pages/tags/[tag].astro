@@ -3,7 +3,7 @@ import MainLayout from '../../layouts/MainLayout.astro';
 import FetchedNote from '../../components/FetchedNote.astro';
 
 export async function getStaticPaths() {
-    const allNotes = await Astro.glob('../notes/00Git/*.md');
+    const allNotes = await Astro.glob('../notes/**/*.md');
 
     return [
         { params: { tag: "branches" }, props: { notes: allNotes } },
@@ -24,7 +24,6 @@ const filteredNotes = notes.filter((note) => note.frontmatter.tags.includes(tag)
 <mainLayout pageTitle={tag}>
     <p>Notes tagged with {tag}</p>
     <ul>
-        <!-- {filteredNotes.map((note) => <li><a href={note.url}>{note.frontmatter.title}</a></li>)} -->
         {filteredNotes.map(note => <FetchedNote url={note.url} title={note.frontmatter.title}/>)}
     </ul>
 </mainLayout>
