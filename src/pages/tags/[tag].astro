@@ -22,7 +22,7 @@ const { filteredNotes } = notes.filter((note) => note.frontmatter.tags.includes(
 
 <mainLayout pageTitle={tag}>
     <p>Notes tagged with {tag}</p>
-    <p>gimme props {props}</p>
+    <p>gimme props {notes}</p>
     <ul>
         <!-- {filteredNotes.map((note) => <li><a href={note.url}>{note.frontmatter.title}</a></li>)} -->
     </ul>
