@@ -25,6 +25,6 @@ const { filteredNotes } = notes.filter((note) => note.frontmatter.tags.includes(
     <p>Notes tagged with {tag}</p>
     <ul>
         <!-- {filteredNotes.map((note) => <li><a href={note.url}>{note.frontmatter.title}</a></li>)} -->
-        {filteredNotes.map(note => <FetchedNote url={note.url} title={note.frontmatter.title}/>)}
+        <!-- {filteredNotes.map(note => <FetchedNote url={note.url} title={note.frontmatter.title}/>)} -->
     </ul>
 </mainLayout>
