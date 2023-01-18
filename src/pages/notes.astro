@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import FetchedNote from '../components/FetchedNote.astro';
 
 const gitNotes = await Astro.glob('../pages/notes/00Git/*.md');
 const htmlNotes = await Astro.glob('../pages/notes/01HTML/*.md');
@@ -15,6 +16,7 @@ const pageTitle = 'Web Development Notes'
             <nav>
                 <ol type="i">
                     {gitNotes.map((note) => <li><a href={note.url}>{note.frontmatter.title}</a></li>)}
+                    {gitNotes.map((note) => <FetchedNote url={note.url} title={note.frontmatter.title} />)}
                 </ol>
             </nav>
             <h3>HTML</h3>
