@@ -1,5 +1,5 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro';
+import MainLayout from '../../layouts/MainLayout.astro';
 
 const allNotes = await Astro.glob('../notes/**/*.md');
 const allUniqueTags = [...new Set(allNotes.map((note) => note.frontmatter.tags).flat())];
