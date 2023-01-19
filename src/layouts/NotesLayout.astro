@@ -11,7 +11,7 @@ const { frontmatter } = Astro.props;
             <p>{frontmatter.description}</p>
         </section>
         <section class="card">
-            <h3>Tags</h3>
+            <h2>Tags</h2>
             <section>
                 {frontmatter.tags.map((tag) => (<a class="tag" href={`/tags/${tag}`}>{tag}</a>))}
             </section>
@@ -34,8 +34,7 @@ const { frontmatter } = Astro.props;
     .card {
         width: 230px;
         height: 120px;
-        /* padding: 5px 15px 0px; */
-        /* margin: 0 50px 50px 0; */
+        padding: 0px 10px 0px;
         border-radius: 10px;
         background-color: var(--card-colour);
     }
