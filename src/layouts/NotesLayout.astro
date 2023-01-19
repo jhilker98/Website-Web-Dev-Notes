@@ -9,7 +9,6 @@ const { frontmatter } = Astro.props;
     <section>
         <h3>Tags</h3>
         <section>
-            <!-- <p class="notes-tags">{frontmatter.tags}</p> -->
             {frontmatter.tags.map((tag) => (<a class="tag" href={`/tags/${tag}`}>{tag}</a>))}
         </section>
     </section>
