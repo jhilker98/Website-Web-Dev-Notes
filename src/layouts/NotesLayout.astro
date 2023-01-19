@@ -5,9 +5,11 @@ const { frontmatter } = Astro.props;
 ---
 <MainLayout pageTitle={frontmatter.title} pageDescription={frontmatter.description}>
     <h1>{frontmatter.section}</h1>
-    <h2>{frontmatter.title}</h2>
-    <p>{frontmatter.description}</p>
-    <section>
+    <section class="card">
+        <h2>{frontmatter.title}</h2>
+        <p>{frontmatter.description}</p>
+    </section>
+    <section class="card">
         <h3>Tags</h3>
         <section>
             {frontmatter.tags.map((tag) => (<a class="tag" href={`/tags/${tag}`}>{tag}</a>))}
@@ -18,6 +20,12 @@ const { frontmatter } = Astro.props;
 </MainLayout>
 
 <style>
+    .card {
+        width: 200px;
+        height: 100px;
+        background-color: var(--card-colour);
+    }
+
     .tag {
         height: 26px;
         margin: 0 10px 10px 0;
