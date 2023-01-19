@@ -12,7 +12,7 @@ const pageDescription = 'Table of Contents for all my front-end web development 
     <main>
         <h1>{pageTitle}</h1>
         <p>You can go through the table of contents and view notes by subject or click on tags to view a page listing all the tags associated with each note.</p>
-        <section>
+        <section id="Tags">
             <h2>Tags</h2>
             <a href='/tags/'>Tags</a>
         </section>
@@ -35,9 +35,9 @@ const pageDescription = 'Table of Contents for all my front-end web development 
 </MainLayout>
 
 <style>
-    section , #TOC {
+    #Tags , #TOC {
         width: 320px;
-        padding: 10px;
+        padding: 10px 15px;
         box-sizing: content-box;
         background-color: var(--card-colour);
     }
