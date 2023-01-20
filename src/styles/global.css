@@ -25,7 +25,3 @@ a {
 .dark a {
     color: var(--primary-colour-light);
 }
-
-.dark #Tags {
-    background-color: gray;
-}
