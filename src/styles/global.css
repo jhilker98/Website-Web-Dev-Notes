@@ -14,3 +14,9 @@ a {
     text-decoration: none;
     color: var(--primary-colour);
 }
+
+/* Dark Mode */
+
+.dark html {
+    background-color: var(--page-colour-dark);
+}
