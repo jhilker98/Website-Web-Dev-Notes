@@ -17,7 +17,8 @@ a {
 
 /* Dark Mode */
 
-.dark {
+.dark body {
     background-color: var(--page-colour-darkmode);
     color: var(--text-colour-darkmode);
 }
+
