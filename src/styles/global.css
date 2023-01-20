@@ -19,5 +19,5 @@ a {
 
 .dark {
     background-color: var(--page-colour-darkmode);
-    color: ;
+    color: white;
 }
