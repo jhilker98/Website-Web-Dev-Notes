@@ -27,5 +27,5 @@ a {
 }
 
 .dark #Tags , .dark #TOC {
-    background-color: gray;
+    background-color: var(--card-colour-darkmode);
 }
