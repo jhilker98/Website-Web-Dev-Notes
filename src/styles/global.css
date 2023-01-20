@@ -29,3 +29,7 @@ a {
 .dark #Tags , .dark #TOC , .dark .card {
     background-color: var(--card-colour-darkmode);
 }
+
+.dark #notes-navigation a:hover {
+    background-color: var(--page-colour-hover-darkmode);
+}
