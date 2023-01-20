@@ -26,6 +26,6 @@ a {
     color: var(--primary-colour-light);
 }
 
-.dark #Tags {
+.dark #Tags , .dark #TOC {
     background-color: gray;
 }
