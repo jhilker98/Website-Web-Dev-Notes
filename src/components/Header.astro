@@ -4,6 +4,7 @@ import DayNightModeToggle from '../components/DayNightModeToggle.astro';
 ---
 
 <header>
+    <div></div>
     <MainNavigation />
     <DayNightModeToggle />
 </header>
@@ -17,5 +18,10 @@ import DayNightModeToggle from '../components/DayNightModeToggle.astro';
         justify-content: center;
         align-items: center;
         border-bottom: 1px solid var(--page-colour-accent);
+    }
+
+    div {
+        width: 50px;
+        height: 50px;
     }
 </style>
