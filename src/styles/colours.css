@@ -4,8 +4,8 @@
     --primary-colour-dark: rgb(50,100,200);
     --accent-colour: orange;
     --page-colour: rgb(240, 240, 250);
-    --page-colour-dark: rgb(140,140,150);
     --page-colour-accent: rgb(220,220,230);
     --page-colour-hover: rgb(235,235,250);
     --card-colour: rgb(255,255,255);
+    --page-colour-darkmode: rgb(100,100,110);
 }
