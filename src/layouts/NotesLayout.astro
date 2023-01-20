@@ -59,4 +59,8 @@ const { frontmatter } = Astro.props;
         .card:nth-of-type(1) {grid-column: 1/2; grid-row: 1/2;}
         .card:nth-of-type(2) {grid-column: 1/2; grid-row: 3/4;}
     }
+
+    .dark .card {
+        background-color: var(--card-colour-darkmode);
+    }
 </style>
