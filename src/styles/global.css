@@ -12,7 +12,7 @@ html {
 
 body {
     width: 100%;
-    max-width: 635px;
+    /* max-width: 635px; */
     margin: 0 auto;
     font-family: 'Quicksand', sans-serif;
 }
