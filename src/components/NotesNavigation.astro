@@ -1,3 +1,8 @@
+---
+const allNotesArray = await Astro.glob('../notes/**/*.md');
+console.log(allNotesArray);
+---
+
 <nav id="notes-navigation">
     <a href="">Previous Note</a>
     <a href="">Next Note</a>
