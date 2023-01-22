@@ -7,13 +7,9 @@ const allNotesArray = await Astro.glob('../pages/notes/**/*.md');
     <a href="">Next Note</a>
 </nav>
 
-<p>{allNotesArray.map((note) => document.getElementById("addr").innerHTML=window.location.href)}</p>
-<!-- <p>{allNotesArray.map((note) => <li><a href={note.url}>{note.title}</a></li>)}</p> -->
-<h1>{Astro.url}</h1>
-<h2 id="addr"></h2>
+<!-- <h1>{Astro.url}</h1>
+<h2 id="addr"></h2> -->
 <!-- <p>{allNotesArray}</p> -->
-
-
 
 <style>
     nav {
@@ -37,6 +33,6 @@ const allNotesArray = await Astro.glob('../pages/notes/**/*.md');
     }
 </style>
 
-<script>
+<!-- <script>
     document.getElementById("addr").innerHTML=window.location.href;
-</script>
+</script> -->
