@@ -1,12 +1,16 @@
 ---
 const allNotesArray = await Astro.glob('../pages/notes/**/*.md');
-console.log(allNotesArray);
 ---
 
 <nav id="notes-navigation">
     <a href="">Previous Note</a>
     <a href="">Next Note</a>
 </nav>
+
+<!-- <p>{allNotesArray.map((note) => <FetchedNote url={note.url} title={note.frontmatter.title} />)}</p>
+<li><a href={url}>{title}</a></li> -->
+
+allNotesArray
 
 <style>
     nav {
