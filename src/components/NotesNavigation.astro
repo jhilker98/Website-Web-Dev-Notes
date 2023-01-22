@@ -10,7 +10,7 @@ const allNotesArray = await Astro.glob('../pages/notes/**/*.md');
 <!-- <p>{allNotesArray.map((note) => <FetchedNote url={note.url} title={note.frontmatter.title} />)}</p>
 <li><a href={url}>{title}</a></li> -->
 
-allNotesArray
+{allNotesArray}
 
 <style>
     nav {
