@@ -9,6 +9,7 @@ const allNotesArray = await Astro.glob('../pages/notes/**/*.md');
 
 <p>{allNotesArray.map((note) => <li><a href={note.url}>{note.title}</a></li>)}</p>
 <h1>{Astro.url}</h1>
+<h2 id="addr"></h2>
 <!-- <p>{allNotesArray}</p> -->
 
 
@@ -34,3 +35,7 @@ const allNotesArray = await Astro.glob('../pages/notes/**/*.md');
         background-color: var(--page-colour-hover);
     }
 </style>
+
+<script>
+    document.getElementById("addr").innerHTML=window.location.href;
+</script>
