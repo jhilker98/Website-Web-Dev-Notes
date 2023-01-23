@@ -4,6 +4,8 @@ import FetchedNote from '../components/FetchedNote.astro';
 
 const gitNotes = await Astro.glob('../pages/notes/00Git/*.md');
 const htmlNotes = await Astro.glob('../pages/notes/01HTML/*.md');
+const cssNotes = await Astro.glob('../pages/notes/02CSS/*.md');
+const jsNotes = await Astro.glob('../pages/notes/03JavaScript/*.md');
 const pageTitle = 'Web Development Notes';
 const pageDescription = 'Table of Contents for all my front-end web development notes. Click on any listed item to be taken to its corresponding page.';
 ---
@@ -28,6 +30,18 @@ const pageDescription = 'Table of Contents for all my front-end web development 
             <nav>
                 <ol type="i">
                     {htmlNotes.map((note) => <FetchedNote url={note.url} title={note.frontmatter.title} />)}
+                </ol>
+            </nav>
+            <h3>CSS</h3>
+            <nav>
+                <ol type="i">
+                    {cssNotes.map((note) => <FetchedNote url={note.url} title={note.frontmatter.title} />)}
+                </ol>
+            </nav>
+            <h3>JS</h3>
+            <nav>
+                <ol type="i">
+                    {jsNotes.map((note) => <FetchedNote url={note.url} title={note.frontmatter.title} />)}
                 </ol>
             </nav>
         </section>
