@@ -46,5 +46,6 @@ a {
 }
 
 .dark #notes-navigation a:hover {
+    border-top: 1px solid var(--page-colour-accent-darkmode);
     background-color: var(--page-colour-hover-darkmode);
 }
