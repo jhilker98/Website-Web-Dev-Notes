@@ -41,6 +41,10 @@ a {
     background-color: var(--card-colour-darkmode);
 }
 
+.dark #notes-navigation nav {
+    border-top: 1px solid var(--page-colour-accent-darkmode);
+}
+
 .dark #notes-navigation a:hover {
     background-color: var(--page-colour-hover-darkmode);
 }
