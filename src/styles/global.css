@@ -33,10 +33,6 @@ a {
     border-bottom: 1px solid var(--page-colour-accent-darkmode);
 }
 
-.dark footer {
-    border-top: 1px solid var(--page-colour-accent-darkmode);
-}
-
 .dark a {
     color: var(--primary-colour-light);
 }
@@ -45,7 +41,14 @@ a {
     background-color: var(--card-colour-darkmode);
 }
 
-.dark #notes-navigation a:hover {
+.dark #notes-navigation {
     border-top: 1px solid var(--page-colour-accent-darkmode);
+}
+
+.dark #notes-navigation a:hover {
     background-color: var(--page-colour-hover-darkmode);
+}
+
+.dark footer {
+    border-top: 1px solid var(--page-colour-accent-darkmode);
 }
