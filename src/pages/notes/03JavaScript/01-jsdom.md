@@ -1,7 +1,7 @@
 ---
 layout: ../../../layouts/NotesLayout.astro
 section: 'JavaScript'
-title: 'Basics'
+title: 'DOM'
 description: 'The document object model.'
 author: 'Research Scientist'
 tags: ["js","dom","variables","functions"]
