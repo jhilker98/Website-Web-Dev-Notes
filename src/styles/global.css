@@ -29,6 +29,10 @@ a {
     color: var(--text-colour-darkmode);
 }
 
+.dark header {
+    border-bottom: var(--page-colour-accent-darkmode);
+}
+
 .dark a {
     color: var(--primary-colour-light);
 }
