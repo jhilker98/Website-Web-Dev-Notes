@@ -3,8 +3,8 @@ const allNotesArray = await Astro.glob('../pages/notes/**/*.md');
 ---
 
 <nav id="notes-navigation">
-    <a href="">Previous Note</a>
-    <a href="">Next Note</a>
+    {page.url.previous ? <a href={page.url.prev}>Previous Note</a> : null}
+    {page.url.next ? <a href={page.url.next}>Next Note</a> : null}
 </nav>
 
 <!-- <h1>{Astro.url}</h1>
