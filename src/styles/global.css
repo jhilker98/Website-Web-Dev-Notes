@@ -41,7 +41,7 @@ a {
     background-color: var(--card-colour-darkmode);
 }
 
-.dark #notes-navigation nav {
+.dark #notes-navigation {
     border-top: 1px solid var(--page-colour-accent-darkmode);
 }
 
