@@ -33,6 +33,10 @@ a {
     border-bottom: 1px solid var(--page-colour-accent-darkmode);
 }
 
+.dark footer {
+    border-top: 1px solid var(--page-colour-accent-darkmode);
+}
+
 .dark a {
     color: var(--primary-colour-light);
 }
