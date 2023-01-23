@@ -16,6 +16,7 @@ const { pageTitle,pageDescription } = Astro.props;
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 		<meta name="viewport" content="width=device-width" />
+		<meta name="title" content={pageTitle} />
 		<meta name="description" content={pageDescription} />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
