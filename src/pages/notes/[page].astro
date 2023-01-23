@@ -11,9 +11,9 @@ const { page } = Astro.props;
 
 <h1> page {page.currentPage} </h1>
 
-<nav id="notes-navigation">
+<!-- <nav id="notes-navigation">
     {page.url.previous ? <a href={page.url.prev}>Previous Note</a> : null}
     {page.url.next ? <a href={page.url.next}>Next Note</a> : null}
-</nav>
+</nav> -->
 
 <NotesNavigation prevUrl={page.url.prev} nextUrl={page.url.next}/>
