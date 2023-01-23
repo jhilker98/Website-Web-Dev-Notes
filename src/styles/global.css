@@ -30,7 +30,7 @@ a {
 }
 
 .dark header {
-    border-bottom: var(--page-colour-accent-darkmode);
+    border-bottom: 1px solid var(--page-colour-accent-darkmode);
 }
 
 .dark a {
