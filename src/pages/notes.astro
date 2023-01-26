@@ -38,10 +38,22 @@ const pageDescription = 'Table of Contents for all my front-end web development 
                     {cssNotes.map((note) => <FetchedNote url={note.url} title={note.frontmatter.title} />)}
                 </ol>
             </nav>
-            <h3>JS</h3>
+            <h3>JavaScript</h3>
             <nav>
                 <ol type="i">
                     {jsNotes.map((note) => <FetchedNote url={note.url} title={note.frontmatter.title} />)}
+                </ol>
+            </nav>
+            <h3>SVG</h3>
+            <nav>
+                <ol type="i">
+                    {svgNotes.map((note) => <FetchedNote url={note.url} title={note.frontmatter.title} />)}
+                </ol>
+            </nav>
+            <h3>Canvas</h3>
+            <nav>
+                <ol type="i">
+                    {canvasNotes.map((note) => <FetchedNote url={note.url} title={note.frontmatter.title} />)}
                 </ol>
             </nav>
         </section>
