@@ -4,7 +4,7 @@ section: 'HTML'
 title: 'Accessibility'
 description: 'Tips on improving the usability of a website.'
 author: 'Research Scientist'
-tags: ["accessibility","debugging","navigation","focus","modal","screen reader","semantic","aria","selectors","progressive enhancement","motion","tools","test"]
+tags: ["accessibility","debugging","navigation","aria","motion","test"]
 ---
 
 # Debugging
@@ -25,24 +25,35 @@ Not all users use a mouse.
 **Shortcuts**
 
 Make a list of keyboard shortcuts for navigating the site and accessing its various items.
+
 Define custom key bindings that are intuitive.
 
 **Tabbing**
 
 Native Navigation
+
 `tab` next item
+
 `shift + tab` previous item
 
 Cycles through the following tags
+
 `<a>`
+
 `<button>`
+
 `<input>`
+
 `<select>`
+
 `<textarea>`
+
 `<iframe>`
 
 Does not cycle through most other tags
+
 `<div>`
+
 `<section>`
 
 *Tab Index*
@@ -52,16 +63,21 @@ Make any element able to be tabbed into, focusable.
 `tabindex="n"`
 
 n is hierarchy order
+
 - `0` - default , reached via sequential order based on html position
+
 - `neg number` - can be focused but not via sequential order , can give specific order with JS
+
 - `pos number` - reached via sequential order given by number
 
 **Skip Links**
 
 A link that steps over a group of links that otherwise would be tabbed into and cycled through.
+
 Useful for helping users skip over navigation and go directly into some main content.
 
 HTML
+
 ```html
 <a href="#maincontnet" class="skip-link">
   skip to main content
@@ -77,6 +93,7 @@ HTML
 ```
 
 CSS
+
 ```css
 #skip-link {
   position: absolute;
@@ -96,8 +113,11 @@ Use skip links for navigation and other elements similarly repeated across pages
 # Hidden vs Visible Elements
 
 Renders in DOM but visually hidden.
+
 Reader accessible.
+
 Useful for including screen reader text.
+
 ```
 .visually-hidden {
   border: 0;
@@ -111,7 +131,9 @@ Useful for including screen reader text.
 ```
 
 Renders in DOM but visually hidden. Accessible.
+
 Reader accessible.
+
 ```
 .opacity {
   opacity: 0;
@@ -119,7 +141,9 @@ Reader accessible.
 ```
 
 Removed from DOM.
+
 Not reader accessible.
+
 ```
 .displayNone {
   display: none;
@@ -127,7 +151,9 @@ Not reader accessible.
 ```
 
 Renders in DOM but visually hidden.
+
 Not reader accessible.
+
 ```
 .visibility {
   visibility: hidden;
@@ -137,11 +163,13 @@ Not reader accessible.
 # Custom Focusable Elements
 
 Once an element is made to be focusable, add accessibility info to the element.
+
 ```html
 <div tabIndex="0" role="button" aria-label="Close"></div>
 ```
 
 Also add accessible controls.
+
 ```html
 <div tabIndex="0" role="button" aria-label="Close" onClick={clickHandler} onKeyDown={keydownHandler}></div>
 ```
@@ -151,6 +179,7 @@ Also add accessible controls.
 **Debugging**
 
 Write this on chrome or firefox console with a website to inspect open.
+
 ```js
 document.body.addEventListener('focusing',(event) => {
   console.log(document.activeElement)
@@ -178,6 +207,7 @@ if (document.activeElement === firstTabStop) {
 ```
 
 Example of pop up modal containing navigation elements.
+
 ```js
 var modal = document.querySelector(".focus-modal");
 var modalButton = document.querySelector(".focus-moda-buttonl");
@@ -240,7 +270,9 @@ function close() {
 **Focus Styles**
 
 Do not remove focus outline.
+
 Instead customize the focus outline.
+
 I may want to use an inset drop shadow.
 
 ```
@@ -254,7 +286,9 @@ I may want to use an inset drop shadow.
 **Alt**
 
 `img src="some.png" alt="some description"/>` no need to write image of
+
 `alt=""` skips element , such as purely decorative elements
+
 `alt="SOME DESCRIPTION"` words in all caps are read letter by letter
 
 **Audio & Video**
@@ -264,13 +298,17 @@ Provide a descriptive text transcript.
 **Hidden Elements**
 
 Screen readers do not read any elements with the following attributes.
+
 `display: none;`
+
 `visibility: hidden;`
+
 `<input hidden/>`
 
 # Semantic HTML
 
 `<html lang="en">` declares language for page
+
 `<quote lang="ru"/>` declares language for the quote
 
 Use only one `H1` tag per page.
@@ -280,6 +318,7 @@ Use only one `H1` tag per page.
 **Role**
 
 Attribute that semantically describes the element.
+
 Useful for older browsers.
 
 ```html
@@ -290,6 +329,7 @@ Useful for older browsers.
 **Label For**
 
 Label for the element it appears in.
+
 ```html
 <label for="username">Your user name</label>
 <input type="text" id="username">
@@ -300,6 +340,7 @@ Label for the element it appears in.
 Useful for differentiating between a shipping vs billing address.
 
 Groups elements under multiple labels.
+
 ```html
 <div id="user">User</div>
 
@@ -317,7 +358,9 @@ Groups elements under multiple labels.
 **Describe By**
 
 Screen readers read the text within the element given in the attribute `aria-describedby="someElement"`.
+
 Useful for detailed descriptions of effects based on user actions.
+
 Useful for giving instructions to users on correct format for inputing text.
 
 ```html
@@ -331,6 +374,7 @@ Useful for giving instructions to users on correct format for inputing text.
 Useful for frequently updated data such as a chat application.
 
 `aria-live=""` reads updated information
+
 - `off` does not read updates , default
 - `polite` reads update once finished reading current section
 - `assertive` stops reading current section and reads updates immediately as they occur
@@ -345,9 +389,11 @@ Useful for frequently updated data such as a chat application.
 *Live Region Example*
 
 Buttons increment or decrement counter by 10.
+
 Adding `aria-live="assertive"` allows the reader to read the value each time it is incremented or decremented.
 
 HTML
+
 ```html
 <section>
   <div class="display-panel">
@@ -361,6 +407,7 @@ HTML
 ```
 
 JS
+
 ```js
 var increment = document.querySelector('#inc');
 var decrement = document.querySelector('#dec');
@@ -407,6 +454,7 @@ setCounter();
 Some users do not enable JS.
 
 To accommodate this user base
+
 - develop navigation interaction with CSS only
 - use JS to check if JS is turned on
 - if on
@@ -418,6 +466,7 @@ To accommodate this user base
 # Colour
 
 Do not use colour alone in order to convey information.
+
 Use shape , size , contrast in addition to colour.
 
 # Motion
@@ -435,6 +484,7 @@ Do not make any page element flash more than 3 times per second.
 For users that have set their devices to reduce animations.
 
 CSS Solution
+
 ```css
 @media (prefers-reduced-motion: reduce) {
   .animation {animation: none; transition: none;}
@@ -462,18 +512,23 @@ handleReducedMotion();
 # Tools
 
 **Google**
+
 Lighthouse
 
 **FireFox**
+
 Look for extensions.
 
 **Readers**
+
 Install a reader to get a sense of what users experience.
+
 Mobile devices and some OSs have built in screen readers.
 
 # Testing
 
 Use a testing library.
+
 Test for the desired outcome instead of testing for the code itself.
 
 - accessilityjs from github

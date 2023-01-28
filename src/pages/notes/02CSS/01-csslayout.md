@@ -74,6 +74,7 @@ Place an icon in a div and inline-block so it aligns with the text.
 Use the smallest amount of selectors to style an element. This avoids styles having to overwrite eah other.
 
 Renaming the class helps keep number of selectors to a minimum.
+
 ```css
 /* nested navigation with different styles for each */
 .nav {. . .}

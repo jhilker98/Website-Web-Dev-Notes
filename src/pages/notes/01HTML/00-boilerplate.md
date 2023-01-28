@@ -21,16 +21,21 @@ tags: ["html","div"]
 HTML tags are for semantic structure.
 
 main
+
 body
+
 article
+
 button
 
 # Navigation
 
 Use button instead of div to make it accessible to screen readers
+
 `<button></button>`
 
 Drop Down Menu
+
 ```
 <select> <option>
 ```

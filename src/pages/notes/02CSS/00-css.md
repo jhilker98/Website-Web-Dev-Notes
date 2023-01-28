@@ -79,6 +79,7 @@ main {
 **Structure**
 
 `:root`
+
 `:nth-of-type()` takes odd,even,3n (every third element),5 (fifth element)
 
 `:only-of-type` matches only one of a kind elements
