@@ -28,6 +28,10 @@ code:not(pre .astro-code) {
     background-color: var(--card-colour-darkmode);
 }
 
+.astro-code {
+    background-color: black;
+}
+
 /* Dark Mode */
 
 .dark {
