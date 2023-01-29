@@ -22,9 +22,9 @@ a {
     color: var(--primary-colour);
 }
 
-code:not(.astro-code) {
+code:not(pre .astro-code) {
     padding: 2px 4px;
-    border-radius: 2px;
+    border-radius: 4px;
     background-color: var(--card-colour-darkmode);
 }
 
