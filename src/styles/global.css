@@ -28,7 +28,7 @@ code:not(pre .astro-code) {
     background-color: var(--card-colour-darkmode);
 }
 
-pre code {
+pre code .astro-code {
     background-color: black;
 }
 
@@ -63,3 +63,4 @@ pre code {
 .dark footer {
     border-top: 1px solid var(--page-colour-accent-darkmode);
 }
+
