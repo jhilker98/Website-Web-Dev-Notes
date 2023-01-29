@@ -28,7 +28,7 @@ code:not(pre .astro-code) {
     background-color: var(--card-colour-darkmode);
 }
 
-.astro-code {
+pre code {
     background-color: black;
 }
 
