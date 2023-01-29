@@ -11,7 +11,7 @@ tags: ["canvas"]
 
 **Element**
 
-`<canvas>` 
+`<canvas></canvas>`
 
 **Required Attributes**
 
@@ -21,11 +21,41 @@ tags: ["canvas"]
 
 `height`
 
+`<canvas id="canvas" width="100" height="100"></canvas>`
+
+Default size is 300px x 150px.
+
 **Content**
 
-`var ctx = canvas.getContext('2d');` 2d
+`const canvas = document.getElementById("canvas");`
 
-`var ctx = canvas.getContext('webgl');` 3d
+`const ctx = canvas.getContext('2d');` 2d
+
+`const ctx = canvas.getContext('webgl');` 3d
+
+# Example Template
+
+Wait unitl the page finishes loading before beginning to draw the canvas.
+
+```javascript
+window.onload = () => {
+    draw();
+};
+```
+
+The draw function.
+
+```javascript
+function draw() {
+    const canvas = document.getElementById("canvas");
+    if (canvas.getContext) {
+        const ctx = canvas.getContext('2d');
+    }
+    // else {
+    //     some code to inform that canvas is not supported
+    // }
+}
+```
 
 **Timing**
 

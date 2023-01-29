@@ -7,21 +7,45 @@ author: 'Research Scientist'
 tags: ["canvas","shapes","paths"]
 ---
 
+Only 2 shapes are able to be drawn by canvas, rectangles and paths.
+
 # Shapes
 
 `rect()` parameters x,y,width,height
+
+The ractangle is drawn immediately onto the canvas.
+
+`ctx.strokeRect()` outline of rectangular area x,y,width,height
 
 `ctx.fillRect()` fills rectangular area x,y,width,height
 
 `ctx.clearRect()` clears fill applied to area specified x,y,width,height
 
+**Example**
+
+```javascript
+window.onload = () => {
+    draw();
+};
+
+function draw() {
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext('2d');
+    ctx.fillRect(50,50,100,100);
+    ctx.clearRect(75,75,50,50);
+    ctx.clearRect(80,80,40,40);
+}
+```
+
 # Paths
+
+Paths are redrawn onto the canvas.
+
+`ctx.beginPath()` clears the buffer , useful between different paths
 
 `ctx.moveTo(x,y)` moves pen without drawing
 
 `ctx.lineTo(x,y)` draws from current position to given position 
-
-`ctx.beginPath()` clears the buffer , useful between different paths
 
 `ctx.closePath()` closes path , draws from last point to the first point
 
@@ -40,6 +64,57 @@ tags: ["canvas","shapes","paths"]
 `ctx.quadraticCurveTo()` controlX,controlY,endX,endY useful for controlling curved lines
 
 `ctx.bezierCurveTo()` controlX1,controlY1,controlX2,controlY2,endX,endY
+
+
+**Steps**
+
+- begin path
+- specify path
+- close path
+
+Calling fill automatically closes the path.
+
+**Example**
+
+*Triangle*
+
+```javascript
+window.onload = () => {
+    draw();
+};
+
+function draw() {
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext('2d');
+    ctx.beginPath();
+    ctx.moveTo(100,100);
+    ctx.lineTo(110,110);
+    ctx.lineTo(90,110);
+    ctx.fill();
+}
+```
+
+*Smiley Face*
+
+```javascript
+window.onload = () => {
+    draw();
+};
+
+function draw() {
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext('2d');
+    ctx.beginPath();
+    ctx.arc(100,95,10,0,Math.PI*2,true);
+    ctx.moveTo(98,92);
+    ctx.arc(96,92,2,0,Math.PI*2,true);
+    ctx.moveTo(106,92);
+    ctx.arc(104,92,2,0,Math.PI*2,true);
+    ctx.moveTo(105,97);
+    ctx.arc(100,97,5,0,Math.PI,false);
+    ctx.stroke();
+}
+```
 
 **A Bezier Curve**
 
@@ -172,7 +247,7 @@ function drawImages() {
 }
 ```
 
-Video.
+Video
 
 ```html
 <!--html-->
@@ -221,5 +296,60 @@ Video.
  }
 ```
 
+**Drawing 3 Bars Directly**
 
+```javascript
+window.onload = inits;
 
+function inits() {
+    aCanvas = document.querySelector("#awesomeCanvas");
+    ctx = aCanvas.getContext('2d');
+    drawSomething();
+    cutSomething();
+    textSomething();
+}
+
+function drawSomething(x,y) {
+    ctx.fillStyle='orange';
+    ctx.fillRect(0,0,20,100);
+    ctx.fillRect(100,0,20,100);
+    ctx.fillRect(200,0,20,100);
+}
+
+function cutSomething() {
+    ctx.clearRect(5,40,10,10);
+}
+
+function textSomething() {
+    ctx.fillText('Canvas',125,20);
+}
+```
+
+**Drawing 3 Bars Using (x,y) Parameters**
+
+```javascript
+window.onload = inits;
+
+function inits() {
+    aCanvas = document.querySelector("#awesomeCanvas");
+    ctx = aCanvas.getContext('2d');
+    drawSomething(0,100);
+    cutSomething();
+    textSomething();
+}
+
+function drawSomething(x,y) {
+    ctx.fillStyle='orange';
+    ctx.fillRect(x,y,20,100);
+    ctx.fillRect(x+50,y,20,100);
+    ctx.fillRect(x+100,y,20,100);
+}
+
+function cutSomething() {
+    ctx.clearRect(5,40,10,10);
+}
+
+function textSomething() {
+    ctx.fillText('Canvas',125,20);
+}
+```
