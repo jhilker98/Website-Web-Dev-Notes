@@ -33,7 +33,7 @@ pre code .astro-code {
 } */
 
 .astro-code {
-    margin: 10px
+    padding: 10px
 }
 
 /* Dark Mode */
