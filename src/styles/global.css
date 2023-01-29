@@ -22,6 +22,10 @@ a {
     color: var(--primary-colour);
 }
 
+code {
+    background-color: ghostwhite;
+}
+
 /* Dark Mode */
 
 .dark {
