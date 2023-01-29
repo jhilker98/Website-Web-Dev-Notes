@@ -22,8 +22,9 @@ a {
     color: var(--primary-colour);
 }
 
-code {
-    margin: 2px;
+code:not(.astro-code) {
+    padding: 2px 4px;
+    border-radius: 2px;
     background-color: var(--card-colour-darkmode);
 }
 
