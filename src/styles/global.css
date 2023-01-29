@@ -22,7 +22,7 @@ a {
     color: var(--primary-colour);
 }
 
-code:not(pre .astro-code) {
+/* code:not(pre .astro-code) {
     padding: 2px 4px;
     border-radius: 4px;
     background-color: var(--card-colour-darkmode);
@@ -30,7 +30,7 @@ code:not(pre .astro-code) {
 
 pre code .astro-code {
     background-color: black;
-}
+} */
 
 /* Dark Mode */
 
