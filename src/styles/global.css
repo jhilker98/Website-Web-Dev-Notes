@@ -32,6 +32,10 @@ pre code .astro-code {
     background-color: black;
 } */
 
+.astro-code {
+    margin: 10px
+}
+
 /* Dark Mode */
 
 .dark {
