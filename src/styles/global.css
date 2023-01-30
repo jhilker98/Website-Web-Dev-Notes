@@ -30,7 +30,6 @@ p code {
 
 .astro-code {
     padding: 10px;
-    background-color: var(--card-colour);
 }
 
 /* Dark Mode */
@@ -68,4 +67,3 @@ p code {
 .dark footer {
     border-top: 1px solid var(--page-colour-accent-darkmode);
 }
-
