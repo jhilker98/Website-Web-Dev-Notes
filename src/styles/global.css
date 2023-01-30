@@ -22,6 +22,10 @@ a {
     color: var(--primary-colour);
 }
 
+p code {
+    background-color: var(--card-colour-darkmode);
+}
+
 /* code:not(pre .astro-code) {
     padding: 2px 4px;
     border-radius: 4px;
