@@ -29,7 +29,8 @@ p code {
 }
 
 .astro-code {
-    padding: 10px
+    padding: 10px;
+    background-color: var(--card-colour);
 }
 
 /* Dark Mode */
