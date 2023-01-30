@@ -23,18 +23,10 @@ a {
 }
 
 p code {
-    background-color: var(--card-colour-darkmode);
-}
-
-/* code:not(pre .astro-code) {
     padding: 2px 4px;
     border-radius: 4px;
     background-color: var(--card-colour-darkmode);
 }
-
-pre code .astro-code {
-    background-color: black;
-} */
 
 .astro-code {
     padding: 10px
