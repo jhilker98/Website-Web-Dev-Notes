@@ -9,17 +9,17 @@ tags: ["canvas","style"]
 
 # Styles
 
-`ctx.fillStyle = '' ` background , color pattern or gradient
+`ctx.fillStyle = ''` background , color pattern or gradient
 
-`ctx.strokeStyle = '' ` outline , color pattern or gradient
+`ctx.strokeStyle = ''` outline , color pattern or gradient
 
-`ctx.lineWidth = '' ` sets line width of stroke , does not apply to fill
+`ctx.lineWidth = ''` sets line width of stroke , does not apply to fill
 
 `ctx.lineCap = ''` butt (default) , round , square
 
 `ctx.lineJoin = ''` miter (default) , round , bevel
 
-`ctx.font = '' ` set some font such as bold 18pt AdventPro
+`ctx.font = ''` set some font such as bold 18pt AdventPro
 
 # Colour Gradients
 
