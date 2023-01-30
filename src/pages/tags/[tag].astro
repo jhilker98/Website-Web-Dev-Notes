@@ -20,8 +20,10 @@ const { notes } = Astro.props;
 ---
 
 <MainLayout pageTitle={tag} pageDescription='List of notes tagged with searched tag.'>
-    <p>Notes tagged with {tag}.</p>
-    <ul>
-        {notes.map(note => <FetchedNote url={note.url} title={note.frontmatter.title}/>)}
-    </ul>
+    <main>
+        <p>Notes tagged with {tag}.</p>
+        <ul>
+            {notes.map(note => <FetchedNote url={note.url} title={note.frontmatter.title}/>)}
+        </ul>
+    </main>
 </MainLayout>
