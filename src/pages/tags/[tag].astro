@@ -17,11 +17,9 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.params;
 const { notes } = Astro.props;
-const pageTitle = {tag};
-// const pageDescription = 'Notes tagged with' {tag};
 ---
 
-<MainLayout pageTitle={pageTitle} pageDescription='List of notes tagged with searched tag.'>
+<MainLayout pageTitle={tag} pageDescription='List of notes tagged with searched tag.'>
     <p>Notes tagged with {tag}.</p>
     <ul>
         {notes.map(note => <FetchedNote url={note.url} title={note.frontmatter.title}/>)}
