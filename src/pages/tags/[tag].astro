@@ -17,11 +17,11 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.params;
 const { notes } = Astro.props;
-const pageTitle = 'Tagged' + {tag};
+// const pageTitle = 'Tagged' + {tag};
 // const pageDescription = 'Notes tagged with' {tag};
 ---
 
-<MainLayout pageTitle={pageTitle} pageDescription='Tags.'>
+<MainLayout pageTitle='Tagged: '+{tag} pageDescription='Tags.'>
     <p>Notes tagged with {tag}.</p>
     <ul>
         {notes.map(note => <FetchedNote url={note.url} title={note.frontmatter.title}/>)}
