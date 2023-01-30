@@ -9,11 +9,13 @@ const pageDescription = 'List of all tags found within the web development notes
 ---
 
 <MainLayout pageTitle={pageTitle} pageDescription={pageDescription}>
-    <h1>Tags</h1>
-    <p>Full list of all available tags. Click on any tag to bring up a list of notes containing that tag.</p>
-    <div class="tags">
-        {sortedTags.map((tag) => (<a class="tag" href={`/tags/${tag}`}>{tag}</a>))}
-    </div>
+    <main>
+        <h1>Tags</h1>
+        <p>Full list of all available tags. Click on any tag to bring up a list of notes containing that tag.</p>
+        <div class="tags">
+            {sortedTags.map((tag) => (<a class="tag" href={`/tags/${tag}`}>{tag}</a>))}
+        </div>
+    </main>
 </MainLayout>
 
 <style>
