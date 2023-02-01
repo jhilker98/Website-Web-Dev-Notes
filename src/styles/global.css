@@ -59,7 +59,7 @@ p code {
     background-color: var(--card-colour-darkmode);
 }
 
-.dark .tag {
+.dark .tags .tag {
     background-color: var(--page-colour-accent-darkmode);
 }
 
