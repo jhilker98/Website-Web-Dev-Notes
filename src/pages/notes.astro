@@ -6,8 +6,12 @@ const gitNotes = await Astro.glob('../pages/notes/00Git/*.md');
 const htmlNotes = await Astro.glob('../pages/notes/01HTML/*.md');
 const cssNotes = await Astro.glob('../pages/notes/02CSS/*.md');
 const jsNotes = await Astro.glob('../pages/notes/03JavaScript/*.md');
-const svgNotes = await Astro.glob('../pages/notes/04SVG/*.md');
-const canvasNotes = await Astro.glob('../pages/notes/05Canvas/*.md');
+const designNotes = await Astro.glob('../pages/notes/04Design/*.md');
+const performanceNotes = await Astro.glob('../pages/notes/05Performance/*.md');
+const debuggingNotes = await Astro.glob('../pages/notes/06Debugging/*.md');
+const svgNotes = await Astro.glob('../pages/notes/07SVG/*.md');
+const canvasNotes = await Astro.glob('../pages/notes/08Canvas/*.md');
+const webglNotes = await Astro.glob('../pages/notes/09WebGL/*.md');
 const pageTitle = 'Web Development Notes';
 const pageDescription = 'Table of Contents for all my front-end web development notes. Click on any listed item to be taken to its corresponding page.';
 ---
@@ -46,6 +50,24 @@ const pageDescription = 'Table of Contents for all my front-end web development 
                     {jsNotes.map((note) => <FetchedNote url={note.url} title={note.frontmatter.title} />)}
                 </ol>
             </nav>
+            <h3>Design</h3>
+            <nav>
+                <ol type="i">
+                    {designNotes.map((note) => <FetchedNote url={note.url} title={note.frontmatter.title} />)}
+                </ol>
+            </nav>
+            <h3>Performance</h3>
+            <nav>
+                <ol type="i">
+                    {performanceNotes.map((note) => <FetchedNote url={note.url} title={note.frontmatter.title} />)}
+                </ol>
+            </nav>
+            <h3>Debugging</h3>
+            <nav>
+                <ol type="i">
+                    {debuggingNotes.map((note) => <FetchedNote url={note.url} title={note.frontmatter.title} />)}
+                </ol>
+            </nav>
             <h3>SVG</h3>
             <nav>
                 <ol type="i">
@@ -56,6 +78,12 @@ const pageDescription = 'Table of Contents for all my front-end web development 
             <nav>
                 <ol type="i">
                     {canvasNotes.map((note) => <FetchedNote url={note.url} title={note.frontmatter.title} />)}
+                </ol>
+            </nav>
+            <h3>WebGL</h3>
+            <nav>
+                <ol type="i">
+                    {webglNotes.map((note) => <FetchedNote url={note.url} title={note.frontmatter.title} />)}
                 </ol>
             </nav>
         </section>
