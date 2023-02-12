@@ -50,14 +50,14 @@ console.log(typeof x); // number
 
 `--` decrement
 
-```
+```javascript
 // variable++
 var a = 1;
 console.log(a++); // 1 (returns 1 then increments value)
 console.log(a);   // 2
 ```
 
-```
+```javascript
 // ++variable
 var a = 1;
 console.log(++a); // 2 (increments value then returns 2)
