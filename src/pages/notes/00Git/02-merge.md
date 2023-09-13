@@ -111,4 +111,4 @@ Git automatically uses your solution for any other similar merge conflicts.
 
 # References
 
-![moving](public/git-reference-merges.png)
+![moving](../../../../public/git-reference-merges.png)
