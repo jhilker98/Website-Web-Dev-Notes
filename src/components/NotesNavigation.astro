@@ -7,6 +7,8 @@ console.log(allNotesArray);
 
 <script>
     console.log('all notes here');
+    const allNotesArray = Astro.fetchContent('../pages/notes/**/*md');
+    console.log(allNotesArray);
 </script>
 
 <nav id="notes-navigation">
