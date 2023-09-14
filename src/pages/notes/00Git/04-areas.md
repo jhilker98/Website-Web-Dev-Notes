@@ -27,7 +27,7 @@ Contains files ready to be commited.
 
 `git add -p` adds files to staging area in hunks interactively
 
-![moving](00Git/Assets/areas.png)
+![moving](../../../../public/git-areas.png)
 
 **Repository**
 
