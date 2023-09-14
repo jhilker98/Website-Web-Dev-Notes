@@ -1,14 +1,13 @@
 ---
 const allNotesArray = await Astro.glob('../pages/notes/**/*.md');
 // const { prevUrl, nextUrl } = Astro.props;
-console.log('all notes here');
 console.log(allNotesArray);
 ---
 
 <script>
     console.log('all notes here');
-    const allNotesArray = Astro.fetchContent('../pages/notes/**/*md');
-    console.log(allNotesArray);
+    // const allNotesArray = Astro.fetchContent('../pages/notes/**/*md');
+    console.log({allNotesArray});
 </script>
 
 <nav id="notes-navigation">
