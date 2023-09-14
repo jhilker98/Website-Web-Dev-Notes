@@ -17,13 +17,14 @@ const videoNotes = await Astro.glob('../pages/notes/11Video/*.md');
 const pageTitle = 'Web Development Notes';
 const pageDescription = 'Table of Contents for all my front-end web development notes. Click on any listed item to be taken to its corresponding page.';
 const allTheNotes = await Astro.glob('../pages/notes/**/*.md');
+const stringOfNotes.toString();
 ---
 
 <MainLayout pageTitle={pageTitle} pageDescription={pageDescription}>
     <main>
         <h1>{pageTitle}</h1>
         <p>You can go through the table of contents and view notes by subject or click on tags to view a page listing all the tags associated with each note.</p>
-        <p>{allTheNotes}</p>
+        <p>{stringOfNotes}</p>
         <section id="Tags">
             <h2>Tags</h2>
             <a href='/tags/'>Tags</a>
