@@ -1,6 +1,6 @@
-# Front End Web Development Notes
+# Website for Front End Web Development Notes
 
-> A collection of personal notes for learning web development.
+> Website hosting a collection of personal notes for learning web development.
 
 This is a living document as I continue to add notes through my programming journey.
 
