@@ -12,3 +12,5 @@
 // <h1> page {page.currentPage} </h1>
 
 // <NotesNavigation prevUrl={page.url.prev} nextUrl={page.url.next}/>
+
+// file name is [page].astro
