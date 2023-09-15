@@ -19,7 +19,8 @@ const { frontmatter } = Astro.props;
             </section>
         </section>
         <slot />
-        <NotesNavigation />
+        <!-- <NotesNavigation /> -->
+        <NotesNavigation prevUrl={page.url.prev} nextUrl={page.url.next}/> <!--added -->
     </main>
 </MainLayout>
 
