@@ -1,10 +1,10 @@
 ---
 import NotesNavigation from "../../components/NotesNavigation.astro";
 
-export async function getStaticPaths({ paginate }) {
-    const allNotesPages = await Astro.glob('../notes/**/*.md');
-    return paginate(allNotesPages, { pageSize: 1 });
-}
+// export async function getStaticPaths({ paginate }) {
+//     const allNotesPages = await Astro.glob('../notes/**/*.md');
+//     return paginate(allNotesPages, { pageSize: 1 });
+// }
 
 const { page } = Astro.props;
 ---
