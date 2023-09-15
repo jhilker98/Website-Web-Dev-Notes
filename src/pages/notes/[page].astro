@@ -1,5 +1,5 @@
 ---
-import NotesNavigation from "../../components/NotesNavigation.astro";
+import NotesNavigation from "../components/NotesNavigation.astro";
 
 export async function getStaticPaths({ paginate }) {
     const allNotesPages = await Astro.glob('../notes/**/*.md');
