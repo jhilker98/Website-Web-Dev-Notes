@@ -1,12 +1,18 @@
 ---
 const allNotesArray = await Astro.glob('../pages/notes/**/*.md');
-// const { prevUrl, nextUrl } = Astro.props;
+const { prevUrl, nextUrl } = Astro.props; // hide when done
 ---
 
-<nav id="notes-navigation">
+<!-- <nav id="notes-navigation">
     <a href="">Previous Note</a>
     <a href="">Next Note</a>
+</nav> -->
+
+<nav id="notes-navigation">
+    <a href={prevUrl}>Previous Note</a>
+    <a href={nextUrl}>Next Note</a>
 </nav>
+
 
 <!-- for [astro] file
 <nav id="notes-navigation">
