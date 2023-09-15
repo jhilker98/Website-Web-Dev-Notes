@@ -1,7 +1,12 @@
 ---
 import MainLayout from "./MainLayout.astro";
 import NotesNavigation from "../components/NotesNavigation.astro";
-const { frontmatter } = Astro.props;
+// const { frontmatter } = Astro.props;
+export async function getStaticPaths({ paginate }) {
+    const allNotesPages = await Astro.glob('../notes/**/*.md');
+    return paginate(allNotesPages, { pageSize: 1 });
+}
+const { frontmatter, page, } = Astro.props;
 ---
 <MainLayout pageTitle={frontmatter.title} pageDescription={frontmatter.description}>
     <main>
