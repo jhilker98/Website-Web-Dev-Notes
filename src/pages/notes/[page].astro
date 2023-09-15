@@ -7,9 +7,9 @@ export async function getStaticPaths({ paginate }) {
 }
 
 const { page } = Astro.props;
-console.log(page);
 ---
 
 <h1> page {page.currentPage} </h1>
+<p> {page.currentPage.url} </p>
 
 <NotesNavigation prevUrl={page.url.prev} nextUrl={page.url.next}/>
